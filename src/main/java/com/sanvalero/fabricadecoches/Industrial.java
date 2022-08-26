@@ -7,7 +7,8 @@ public class Industrial extends Vehiculo{
 
 
     //Constructor con características específicas de los vehiculos industriales
-    public Industrial(boolean bolaRemolque, int capacidadCarga) {
+    public Industrial(String matricula, boolean bolaRemolque, int capacidadCarga) {
+        super(matricula);
         this.bolaRemolque = bolaRemolque;
         this.capacidadCarga = capacidadCarga;
 
