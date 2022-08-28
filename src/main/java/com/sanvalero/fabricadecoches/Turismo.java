@@ -28,7 +28,6 @@ public class Turismo extends Vehiculo {
     }
 
     //Setter y getter para extra descapotable
-
     public void setDescapotable(String descapotable) {
         if (descapotable.equalsIgnoreCase("si")) {
             this.descapotable=true;
@@ -40,12 +39,24 @@ public class Turismo extends Vehiculo {
         if (descapotable==true) {
             return "DESCAPOTABLE";
         }else {
-            return "CAPOTA SERIE";
+            return "Capota SERIE";
         }
     }
 
     //Setter y getter para extra asientos de cuero
-
-
+    public void setAsientosCuero(String asientosCuero) {
+        if (asientosCuero.equalsIgnoreCase("si")){
+            this.asientosCuero=true;
+        }else{
+            this.asientosCuero=false;
+        }
+    }
+    public String isAsientosCuero() {
+        if(asientosCuero==true){
+            return "Asientos CUERO";
+        }else{
+            return "Asientos TELA";
+        }
+    }
 }
 
