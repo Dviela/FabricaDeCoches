@@ -12,7 +12,12 @@ public class Turismo extends Vehiculo {
         this.descapotable = descapotable;
         this.asientosCuero = asientosCuero;
         this.color = color;
-
-        //TODO Getter y Setter para cambiar y poder ver color y extras
     }
-}
+    public Turismo(String matricula){
+        super(matricula);
+    }
+        //TODO Getter y Setter para cambiar y poder ver color y extras
+
+
+    }
+

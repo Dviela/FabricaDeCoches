@@ -17,8 +17,22 @@ abstract class Vehiculo {
         pesoPlataforma = 450;
     }
     //TODO getter y setter para establecer extras
-
-
+    //Getter y setter del climatizador
+    public void setClimatizador(String climatizador) {
+        if (climatizador.equalsIgnoreCase("si")) {
+            this.climatizador = true;
+        } else {
+            this.climatizador = false;
+        }
+    }
+    public String isClimatizador() {
+        if(climatizador == true){
+            return "CLIMATIZADOR";
+        }else{
+            return "AIRE ACONDICIONADO";
+        }
+    }
+    //Getter y setter de caja de cambios
 
 
     //TODO metodo Equals para evitar dos vehiculos con la misma matricula
