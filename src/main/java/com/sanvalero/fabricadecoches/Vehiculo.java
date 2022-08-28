@@ -33,7 +33,20 @@ abstract class Vehiculo {
         }
     }
     //Getter y setter de caja de cambios
-
+    public void setAutomatico(String automatico) {
+        if (automatico.equalsIgnoreCase("si")) {
+            this.automatico = true;
+        } else {
+            this.automatico = false;
+        }
+    }
+    public String isAutomatico() {
+        if(automatico == true){
+            return "CAMBIO AUTOMATICO";
+        }else{
+            return "CAMBIO MANUAL";
+        }
+    }
 
     //TODO metodo Equals para evitar dos vehiculos con la misma matricula
 
