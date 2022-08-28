@@ -18,6 +18,19 @@ public class Turismo extends Vehiculo {
     }
         //TODO Getter y Setter para cambiar y poder ver color y extras
 
-
+    //Setter y getter para cambiar color de un Turimo
+    public void setColor(String colorCoche) {
+        color = colorCoche;
     }
+
+    public String getColor() {
+        return "color del vehiculo: " + color;
+    }
+    //Setter y getter para extra descapotable
+
+
+    //Setter y getter para extra asientos de cuero
+
+
+}
 
