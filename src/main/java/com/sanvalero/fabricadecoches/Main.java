@@ -6,8 +6,10 @@ public class Main {
     coche1.setClimatizador("no");
     coche1.setAutomatico("si");
     coche1.setColor("Rojo");
+    coche1.setDescapotable("si");
 
-        System.out.println("Turismo con " + coche1.isClimatizador() + " y " + coche1.isAutomatico());
+        System.out.println("Turismo con " + coche1.isClimatizador() + " " + coche1.isAutomatico()
+                + " " + coche1.isDescapotable());
         System.out.println(coche1.getColor());
     }
 }

@@ -26,8 +26,23 @@ public class Turismo extends Vehiculo {
     public String getColor() {
         return "color del vehiculo: " + color;
     }
+
     //Setter y getter para extra descapotable
 
+    public void setDescapotable(String descapotable) {
+        if (descapotable.equalsIgnoreCase("si")) {
+            this.descapotable=true;
+        }else{
+            this.descapotable=false;
+        }
+    }
+    public String isDescapotable(){
+        if (descapotable==true) {
+            return "DESCAPOTABLE";
+        }else {
+            return "CAPOTA SERIE";
+        }
+    }
 
     //Setter y getter para extra asientos de cuero
 
