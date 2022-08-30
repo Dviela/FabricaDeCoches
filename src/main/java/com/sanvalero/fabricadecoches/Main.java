@@ -15,6 +15,7 @@ public class Main {
     furgoneta1.setBolaRemolque("si");
     furgoneta1.setClimatizador("si");
     furgoneta1.setAutomatico("no");
+    furgoneta1.seleccionarCapacidadCarga();
 
     //Pruebas Turismo
         System.out.println("Turismo con " + coche1.isClimatizador() + ", " + coche1.isAutomatico()
@@ -24,5 +25,6 @@ public class Main {
     //Pruebas Industrial
         System.out.println("Vehiculo Industrial con " + furgoneta1.isBolaRemolque()
                 + ", " + furgoneta1.isAutomatico() + ", " +  furgoneta1.isClimatizador());
+        System.out.println("Vehiculo con " + furgoneta1.getCapacidadCarga());
     }
 }
