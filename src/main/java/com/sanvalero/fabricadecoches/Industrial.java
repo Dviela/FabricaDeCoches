@@ -5,19 +5,12 @@ import java.util.Scanner;
 public class Industrial extends Vehiculo {
 
     private boolean bolaRemolque;
-    private int capacidadCarga;
+    private byte capacidadCarga;
 
-
-    //Constructor con características específicas de los vehiculos industriales
-    public Industrial(String matricula, int capacidadCarga) {
-        super(matricula);
-        this.capacidadCarga = capacidadCarga;
-    }
 
     public Industrial(String matricula) {
         super(matricula);
     }
-    //TODO Getter para datos del vehiculo
 
     //Getter y setter para bola de remolque
     public void setBolaRemolque(String bolaRemolque) {
@@ -29,7 +22,7 @@ public class Industrial extends Vehiculo {
     }
 
     public String isBolaRemolque() {
-        if (bolaRemolque == true) {
+        if (bolaRemolque) {
             return "BOLA DE REMOLQUE";
         } else {
             return "SERIE";
@@ -43,7 +36,7 @@ public class Industrial extends Vehiculo {
         do {
             System.out.println("1. 450Kg \n2. 750Kg \n3. 3.500Kg");
             System.out.print("Elegir capacidad de carga: ");
-            capacidadCarga = sn.nextInt();
+            capacidadCarga = sn.nextByte();
 
 
             switch (capacidadCarga) {

@@ -16,7 +16,6 @@ public class Turismo extends Vehiculo {
     public Turismo(String matricula){
         super(matricula);
     }
-        //TODO Getter y Setter para cambiar y poder ver color y extras
 
     //Setter y getter para cambiar color de un Turimo
     public void setColor(String colorCoche) {
@@ -36,7 +35,7 @@ public class Turismo extends Vehiculo {
         }
     }
     public String isDescapotable(){
-        if (descapotable==true) {
+        if (descapotable) {
             return "DESCAPOTABLE";
         }else {
             return "Capota SERIE";
@@ -52,7 +51,7 @@ public class Turismo extends Vehiculo {
         }
     }
     public String isAsientosCuero() {
-        if(asientosCuero==true){
+        if(asientosCuero){
             return "Asientos CUERO";
         }else{
             return "Asientos TELA";

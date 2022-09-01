@@ -1,9 +1,12 @@
 package com.sanvalero.fabricadecoches;
 
+import java.util.Objects;
+
 abstract class Vehiculo {
 
-    private int neumaticos, largo, ancho, motor, pesoPlataforma;
-    private String matricula;
+    private final int neumaticos,  motor, pesoPlataforma;
+    private final float largo, ancho;
+    private final String matricula;
     private boolean climatizador, automatico;
 
 
@@ -11,12 +14,12 @@ abstract class Vehiculo {
     public Vehiculo(String matricula) {
         this.matricula=matricula;
         neumaticos = 4;
-        largo = 4450;
-        ancho = 1880;
+        largo = 4.45f;
+        ancho = 1.88f;
         motor = 1600;
         pesoPlataforma = 450;
     }
-    //TODO getter y setter para establecer extras
+
     //Getter y setter del climatizador
     public void setClimatizador(String climatizador) {
         if (climatizador.equalsIgnoreCase("si")) {
@@ -26,7 +29,7 @@ abstract class Vehiculo {
         }
     }
     public String isClimatizador() {
-        if(climatizador == true){
+        if(climatizador){
             return "CLIMATIZADOR";
         }else{
             return "AIRE ACONDICIONADO";
@@ -41,13 +44,25 @@ abstract class Vehiculo {
         }
     }
     public String isAutomatico() {
-        if(automatico == true){
+        if(automatico){
             return "CAMBIO AUTOMATICO";
         }else{
             return "CAMBIO MANUAL";
         }
     }
 
-    //TODO metodo Equals para evitar dos vehiculos con la misma matricula
+    //Metodo Equals para evitar dos vehiculos con la misma matricula
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Vehiculo vehiculo = (Vehiculo) o;
+        return matricula.equals(vehiculo.matricula);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(matricula);
+    }
 }
