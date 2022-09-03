@@ -1,0 +1,32 @@
+body {
+    font-family: Tahoma;
+    background-color: rgb(58, 115, 212);
+    margin: 5% 10%;
+    line-height: normal;
+    max-width: 1100px;
+    
+}
+
+h1 {
+    color: black;
+    font-size: 28px;
+    border-width: 2px;
+    border-style:hidden;
+    padding:30px;
+}
+
+h2 {
+    color: blueviolet;
+    background-color: aquamarine;
+    font-size: bold, 12px Arial;
+    margin: 10px 15%;
+}
+
+p {
+    font-size: 12px;
+    color: rgb(255, 255, 255);
+    text-indent: 10px;
+    margin-top: 5%;
+    
+    
+}
